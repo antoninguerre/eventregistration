@@ -42,7 +42,7 @@ public class Event {
 	
 	
 	private Time endTime;
-	//comment
+	
 	public void setEndTime(Time value) {
 		this.endTime = value;
 	}
