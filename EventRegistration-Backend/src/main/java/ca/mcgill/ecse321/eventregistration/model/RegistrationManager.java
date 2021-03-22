@@ -2,48 +2,51 @@ package ca.mcgill.ecse321.eventregistration.model;
 
 import java.util.*;
 import javax.persistence.CascadeType;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Entity;
 
 @Entity
 public class RegistrationManager {
 
+	@Id
+	int id;
 
-	private List<Person> person;
+	private List<Person> persons;
 	
 	@OneToMany(cascade = {CascadeType.ALL})
 	public List<Person> getPersons() {
-		return this.person;
+		return this.persons;
 	}
 	
-	public void setPerson(List<Person> persons) {
-		this.person = persons;
+	public void setPersons(List<Person> persons) {
+		this.persons = persons;
 	}
 	
 	
 	
-	private List<Registration> registration;
+	private List<Registration> registrations;
 	
 	@OneToMany(cascade = {CascadeType.ALL})
 	public List<Registration> getRegistrations() {
-		return this.registration;
+		return this.registrations;
 	}
 	
-	public void setRegistration(List<Registration> registrations) {
-		this.registration = registrations;
+	public void setRegistrations(List<Registration> registrations) {
+		this.registrations = registrations;
 	}
 	
 	
 	
-	private List<Event> event;
+	private List<Event> events;
 
 	@OneToMany(cascade = {CascadeType.ALL})
 	public List<Event> getEvents() {
-		return this.event;
+		return this.events;
 	}
 	
-	public void setEvent(List<Event> events) {
-		this.event = events;
+	public void setEvents(List<Event> events) {
+		this.events = events;
 	}
 
 	

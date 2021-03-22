@@ -64,7 +64,7 @@ public class TestEventRegistrationPersistence {
 		Time endTime = java.sql.Time.valueOf(LocalTime.of(13, 25));
 		Event event = new Event();
 		event.setName(name);
-		event.setEventDate(date);
+		event.setDate(date);
 		event.setStartTime(startTime);
 		event.setEndTime(endTime);
 		eventRepository.save(event);
@@ -75,7 +75,7 @@ public class TestEventRegistrationPersistence {
 
 		assertNotNull(event);
 		assertEquals(name, event.getName());
-		assertEquals(date, event.getEventDate());
+		assertEquals(date, event.getDate());
 		assertEquals(startTime, event.getStartTime());
 		assertEquals(endTime, event.getEndTime());
 	}
@@ -93,7 +93,7 @@ public class TestEventRegistrationPersistence {
 		Time endTime = java.sql.Time.valueOf(LocalTime.of(13, 25));
 		Event event = new Event();
 		event.setName(eventName);
-		event.setEventDate(date);
+		event.setDate(date);
 		event.setStartTime(startTime);
 		event.setEndTime(endTime);
 		eventRepository.save(event);

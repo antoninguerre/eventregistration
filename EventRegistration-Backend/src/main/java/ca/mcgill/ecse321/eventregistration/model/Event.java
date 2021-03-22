@@ -22,11 +22,11 @@ public class Event {
 
 	private Date eventDate;
 	
-	public void setEventDate(Date value) {
+	public void setDate(Date value) {
 		this.eventDate = value;
 	}
 	
-	public Date getEventDate() {
+	public Date getDate() {
 		return this.eventDate;
 	}
 	
